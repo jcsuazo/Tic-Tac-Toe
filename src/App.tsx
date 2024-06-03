@@ -15,10 +15,10 @@ function App() {
         <button onClick={() => window.location.reload()}>Play again</button>
         </>
       ):(
-        board.map((currentBoard, currentBoardIndex) => (
-          <div className="board" key={currentBoardIndex}>
+        board.map((currentBoard, currentBoardRowIndex) => (
+          <div className="board" key={currentBoardRowIndex}>
             {currentBoard.map((cell, cellIndex) => (
-              <div key={cellIndex} className="cell" onClick={() => playerAction(currentBoardIndex, cellIndex)}>{cell}</div>
+              <div key={cellIndex} className="cell" onClick={() => playerAction(currentBoardRowIndex, cellIndex)}>{cell}</div>
             ))}
           </div>
         ))
