@@ -9,7 +9,20 @@ function useGame() {
     ['', '', ''],
     ['', '', ''],
   ])
-return {winner, board, isGameOver, currentPlayer};
+  function playerAction(currentBoardIndex: number, cellIndex: number) {
+    if (isGameOver) {
+      return;
+    }
+    board[currentBoardIndex][cellIndex] = currentPlayer
+
+    setBoard(board)
+    if (currentPlayer === 'X') {
+      setCurrentPlayer('O');
+    } else {
+      setCurrentPlayer('X');
+    }
+  }
+return {winner, board, isGameOver, currentPlayer, playerAction};
 }
 
 export default useGame;

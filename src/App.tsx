@@ -2,14 +2,14 @@ import "./App.css";
 import useGame from "./hooks/useGame";
 
 function App() {
-  const { board } = useGame();
+  const { board, playerAction } = useGame();
   return (
     <div className="app">
       <h1>Tic Tac Toe</h1>
-      {board.map((currentBoard) => (
-        <div className="board">
-          {currentBoard.map((cell) => (
-            <div className="cell">{cell}</div>
+      {board.map((currentBoard, currentBoardIndex) => (
+        <div className="board" key={currentBoardIndex}>
+          {currentBoard.map((cell, cellIndex) => (
+            <div key={cellIndex} className="cell" onClick={() => playerAction(currentBoardIndex, cellIndex)}>{cell}</div>
           ))}
         </div>
       ))}
