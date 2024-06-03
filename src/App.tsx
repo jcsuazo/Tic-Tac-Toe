@@ -16,9 +16,9 @@ function App() {
         </>
       ):(
         board.map((currentBoard, currentBoardRowIndex) => (
-          <div className="board" key={currentBoardRowIndex}>
+          <div className="board" key={currentBoardRowIndex} >
             {currentBoard.map((cell, cellIndex) => (
-              <div key={cellIndex} className="cell" onClick={() => playerAction(currentBoardRowIndex, cellIndex)}>{cell}</div>
+              <div data-testid={`row_${currentBoardRowIndex}_cell_${cellIndex}`} key={cellIndex} className="cell" onClick={() => playerAction(currentBoardRowIndex, cellIndex)}>{cell}</div>
             ))}
           </div>
         ))
