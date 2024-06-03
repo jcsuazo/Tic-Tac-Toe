@@ -32,16 +32,9 @@
 .cell:hover {
   background-color: green;
 }
-/* .board:nth-child() {
-  border-right: 1px solid green;
-} */
+
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid white !important; */
-  
-  /* grid-gap: 10px; */
-  /* width: 50%;
-  height: 50%; */
-  /* border: 1px solid red; */
+
 }
