@@ -9,7 +9,7 @@ function useGame() {
     ['', '', ''],
     ['', '', ''],
   ])
-return {winner, setWinner,board, isGameOver, setBoard, setGame, currentPlayer, setCurrentPlayer};
+return {winner, board, isGameOver, currentPlayer};
 }
 
 export default useGame;

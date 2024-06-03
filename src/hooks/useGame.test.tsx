@@ -14,5 +14,14 @@ describe('useGame', () => {
     expect(result.current.isGameOver).toBe(false);
   })
 
-  
+  test("should render the initial board state", () => {
+    const { result } = renderHook(() => useGame());
+    expect(result.current.board).toEqual([
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', ''],
+    ]);
+  })
+
+
 })
